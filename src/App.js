@@ -14,6 +14,7 @@ function App() {
   const [counter, setCounter] = React.useState(10);
   //Here is a boolean state that let react know when the timer should start 
   const [isActive, updateIsActive] = React.useState(false);
+  const [solution, setSolution] = React.useState([])
 
   useEffect(() => {
     let interval = null;
@@ -30,7 +31,7 @@ function App() {
 
   async function apiCall() {
     let word = randomLetters.join('');
-    console.log(randomLetters)
+    console.log('async function start', word)
     const response = await axios({
       "method": "GET",
       "url": `https://danielthepope-countdown-v1.p.rapidapi.com/solve/${word}`,
@@ -39,16 +40,18 @@ function App() {
         "x-rapidapi-host": "danielthepope-countdown-v1.p.rapidapi.com",
         "x-rapidapi-key": "ab3a292e4amsh3915602120aad7fp17e706jsn5d35a0eab152"
       }, "params": {
-        "variance": "1"
+        "variance": "-1"
       }
     })
-    console.log("apiCall", response.data)
+    console.log("apiCall end", response.data)
+    setSolution(response.data)
   }
   function handleTimer(e) {
     //here when the button is click it will turn IsActive into true and commence the timer
     let bool = isActive
     if (counter === 10) {
       updateIsActive(!bool);
+      apiCall();
     } else if (counter === 0) {
       updateIsActive(!bool)
       setCounter(10);
@@ -57,7 +60,7 @@ function App() {
     }
   }
   function handleRandomPick() {
-    console.log('In the function')
+    console.log('handleRandomPick function')
     let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
       "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     let vowels = ['a', 'e', 'i', 'o', 'u']
