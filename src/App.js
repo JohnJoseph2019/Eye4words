@@ -30,6 +30,7 @@ function App() {
 
   async function apiCall() {
     let word = randomLetters.join('');
+    console.log(randomLetters)
     const response = await axios({
       "method": "GET",
       "url": `https://danielthepope-countdown-v1.p.rapidapi.com/solve/${word}`,
@@ -38,10 +39,10 @@ function App() {
         "x-rapidapi-host": "danielthepope-countdown-v1.p.rapidapi.com",
         "x-rapidapi-key": "ab3a292e4amsh3915602120aad7fp17e706jsn5d35a0eab152"
       }, "params": {
-        "variance": "0"
+        "variance": "1"
       }
     })
-    console.log(response.data)
+    console.log("apiCall", response.data)
   }
   function handleTimer(e) {
     //here when the button is click it will turn IsActive into true and commence the timer
@@ -65,7 +66,7 @@ function App() {
       if (i === 0) newWords.push(vowels[Math.floor(Math.random() * vowels.length)]);
       newWords.push(alphabet[Math.floor(Math.random() * alphabet.length)])
     }
-    setRandomLetter(newWords)
+    setRandomLetter(newWords);
     apiCall();
   }
   return (
@@ -79,6 +80,7 @@ function App() {
             handleTimer={handleTimer}
             counter={counter}
             isActive={isActive}
+
           />
         </Route>
         <Route path="/Results">
