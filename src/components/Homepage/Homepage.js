@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 
 export default function Homepage(props) {
-  console.log(props.handleRandomPick)
+  console.log('Homepage', props)
   return (
     <>
       <h1>Anagrams</h1>
