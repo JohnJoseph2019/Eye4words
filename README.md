@@ -1,68 +1,128 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Overview
 
-## Available Scripts
+## Project Title
 
-In the project directory, you can run:
+Words in a Word
 
-### `npm start`
+## Project Description
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This application is a simple game that the user can play on their spare time. The user will play one round of figuring out how many words they can come up with when giving a random of 7 letters. Now here is the intense part, they user will be timed. The user will have 30 seconds to figure out as many words as they can. Once the time is up the user will be able to see how many points it received for the right words. The user will get to play this game as many times they want with a reset button.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Wireframes
 
-### `npm test`
+[Wireframes](https://wireframe.cc/pro/pp/b788c4dfd337672)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Component Hierarchy
 
-### `npm run build`
+```
+node_modules
+public
+src
+|__ index.js
+|__ index.css
+|__ App.js
+|__ App.css
+|__ App.test.js
+|__ serviceWorker.js
+|__ setupTests.js
+|__ components/
+      |__ Homepage.js
+      |__ Homepage.css
+      |__ PlayGameButton.js
+      |__ PlayGameButton.css      
+      |__ PlayGame.js
+      |__ PlayGame.css
+      |__ Results.js
+      |__ Results.css
+      |__ DisplayList.js
+      |__ DisplayList.css
+      |__ RestartButton.js
+      |__ RestartButton.css
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<!-- ## API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Anagram Solver](https://rapidapi.com/danielthepope/api/countdown/endpoints)
+<br>
+[WordsApi](https://www.wordsapi.com/) -->
 
-### `npm run eject`
+#### API DATA
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+|    API     | Quality Docs? | Website       | Sample Query                            |
+| :--------: | :-----------: | :------------ | :-------------------------------------- |
+| Anagram Solver |     some     | _https://rapidapi.com/danielthepope/api/countdown/endpoints_ | _https://danielthepope-countdown-v1.p.rapidapi.com/solve/pimgatner_ |
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## MVP
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Be able to call the API to check for all the solutions to see if they are words
+- Be able to have a fully fucntionaly timer of 30 sec as
+- Be able to use that timer to start on click of a button
+- User Router to direct to the right components when needed
+- Have a structural hierchy on how my project should be presented
+- Be able to create test to see if my input fields is working correctly
+- Able to use Display flex to align content on each component
+- Be able to sytle each component on thier seperate CSS.
 
-## Learn More
+## PostMVP 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Be Able to use a second API to display the definition of the correct words
+- Change the input/buttons effects 
+- Be able to add music gaming backgrround track
+- Be able to some animation with transition
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Project Schedule
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+|  Day | Deliverable | Status
+|---|---| ---|
+|April 27th| Project Planning/Project Aproval - Start Basic Components| 
+|April 28th| Start with Timer function / API CAll / Build Homepage /PlayGameButton /PlayGame component| 
+|April 29th| Finish Result / DisplayList / RestartButton component | 
+|April 30th| CSS Styling | 
+|May 1st| Presentation | 
 
-### Analyzing the Bundle Size
+<!-- ## Priority Matrix
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+![Priotity Matrix](https://i.imgur.com/stsKBoI.jpg) -->
 
-### Making a Progressive Web App
+## Timeframes
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| React-Setup| L | 1hrs|  |  |
+| CSS Style - Basic | L | 1hrs|  | |
+| Homepage component - React | M | 2hrs |  |  |
+| Homepage component - CSS | M | 1hrs |  |  |
+| PlayGame Button component - React | M | 3hrs |  |  |
+| PlayGame Button component - CSS | L | 1hrs |  |  |
+| Accessing the API | M | 2hrs |  |  |
+| Create the timer function | H | 6hrs |  |  |
+| Create PlayGameButton Component| H | 3hrs |  |  |
+| Create PlayGameButton CSS Basic| L | 1hrs |  |  |
+| Create PlayGame component| H | 5hrs |  |  |
+| Create PlayGame CSS - Basic| L | 1hrs |  |  |
+| Create Result component| H | 3hrs |  |  |
+| Create Result CSS Basic| L | 1hrs |  |  |
+| Create DisplayeList Component| H | 3hrs |  |  |
+| Create DisplayeList CSS Basic| L | 1hrs |  |  |
+| Create Restart Button Component| H | 3hrs |  |  |
+| Create Restart Button CSS Basic| H | 1hrs |  |  |
+| Styling CSS | H | 6hrs |  |  |
+| Total | H | 45hrs| hrs | hrs | 
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## SWOT Analysis
+My weakeness is understanding the React cycle, I need better understand how React works when loading different components. I will overcome this by reading on this and definitly using my tokens for help ,but I believe the best way is to play around with console.log to see what is happening at each part of the React cycle (trial and error). I also am going to have a major problem in setting a timer using the methods, set-timeout/set-Interval, This is going to take me a while to grip and I need to start reading how to incoporate a 30 sec timer with React and where to place it
 
-### Deployment
+## Code Snippet
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
 
-### `npm run build` fails to minify
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```
+
+## Change Log
+ Use this section to document what changes were made and the reasoning behind those changes.  
