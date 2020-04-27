@@ -2,7 +2,8 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 
-export default function Homepage() {
+export default function Homepage(props) {
+  console.log(props.handleRandomPick)
   return (
     <>
       <h1>Anagrams</h1>
@@ -12,7 +13,7 @@ export default function Homepage() {
         <li>to submit and answer just click the submit or press you enter key</li>
         <li>Okay click 'Ready' to Begin</li>
       </ol>
-      <Link to="/PlayGame">Ready</Link>
+      <Link to="/PlayGame" > <button onClick={props.handleRandomPick}> Ready </button></Link>
     </>
   )
 }
