@@ -19,7 +19,7 @@ export default function PlayGame(props) {
 
       <div>Countdown: {props.counter} Sec.</div>
       {props.isActive === false ? <button onClick={props.handleTimer}>Start</button> : ""}
-      {props.isActive === true ? <Redirect to="/Results" /> : ""}
+      {props.counter === 0 ? <Redirect to="/Results" /> : ""}
       <div className="displayList">
         {props.randomLetters.length !== 0 ? props.randomLetters.map((letter, idx) =>
           <div key={idx} className="letters">{letter}</div>)

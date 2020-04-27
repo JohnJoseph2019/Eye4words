@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Switch } from "react-router-dom"
 import './App.css';
+import axios from "axios"
 import Homepage from "./components/Homepage/Homepage"
 import PlayGame from "./components/PlayGame/PlayGame"
 import Results from "./components/Results/Results"
@@ -10,7 +11,7 @@ function App() {
   const [randomLetters, setRandomLetter] = useState([]);
   const [inputGuess, updateInputGuess] = useState('');
   //Now this is for my timer of 30 secs
-  const [counter, setCounter] = React.useState(30);
+  const [counter, setCounter] = React.useState(10);
   //Here is a boolean state that let react know when the timer should start 
   const [isActive, updateIsActive] = React.useState(false);
 
@@ -27,14 +28,30 @@ function App() {
     //this will allow for the counter keep triggering itself - this information I leanred online not sure if is true
   }, [isActive, counter])
 
+  async function apiCall() {
+    let word = randomLetters.join('');
+    const response = await axios({
+      "method": "GET",
+      "url": `https://danielthepope-countdown-v1.p.rapidapi.com/solve/${word}`,
+      "headers": {
+        "content-type": "application/octet-stream",
+        "x-rapidapi-host": "danielthepope-countdown-v1.p.rapidapi.com",
+        "x-rapidapi-key": "ab3a292e4amsh3915602120aad7fp17e706jsn5d35a0eab152"
+      }, "params": {
+        "variance": "0"
+      }
+    })
+    console.log(response.data)
+  }
   function handleTimer(e) {
     //here when the button is click it will turn IsActive into true and commence the timer
     let bool = isActive
-    if (counter === 30) {
+    if (counter === 10) {
       updateIsActive(!bool);
     } else if (counter === 0) {
-      setCounter(30);
-      // updateIsActive(!bool)
+      updateIsActive(!bool)
+      setCounter(10);
+      handleRandomPick();
 
     }
   }
@@ -49,6 +66,7 @@ function App() {
       newWords.push(alphabet[Math.floor(Math.random() * alphabet.length)])
     }
     setRandomLetter(newWords)
+    apiCall();
   }
   return (
     < div className="App" >
