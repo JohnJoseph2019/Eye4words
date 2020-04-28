@@ -1,18 +1,20 @@
 import React from "react"
-import { Link, Redirect } from "react-router-dom"
+import { Redirect } from "react-router-dom"
 import "./PlayGame.css"
 
 export default function PlayGame(props) {
   console.log('PlayGame function', props);
   function handleSubmit() {
-
+    if (props.solution.includes(props.inputGuess) && !props.usersInputList.includes(props.inputGuess)) {
+      let temp = props.usersInputList;
+      temp.push(props.inputGuess)
+      props.updateUsersList(temp);
+    }
   }
   function handleInput(e) {
     let guess = e.target.value;
     props.updateInputGuess(guess);
-
   }
-
   return (
     <>
       <h1>PlaY Game</h1>

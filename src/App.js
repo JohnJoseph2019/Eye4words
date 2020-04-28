@@ -8,9 +8,14 @@ import Results from "./components/Results/Results"
 import { useEffect, useState } from "react";
 
 function App() {
+  //This is for the all random letters
   const [randomLetters, setRandomLetter] = useState([]);
+  //This is to receives the user's Input
   const [inputGuess, updateInputGuess] = useState('');
   //Now this is for my timer of 30 secs
+  //This is an array of the input answer of the user
+  const [usersInputList, updateUsersList] = useState([]);
+  //Setting counter for the timer
   const [counter, setCounter] = React.useState(10);
   //Here is a boolean state that let react know when the timer should start 
   const [isActive, updateIsActive] = React.useState(false);
@@ -82,8 +87,11 @@ function App() {
             handleTimer={handleTimer}
             counter={counter}
             isActive={isActive}
-
+            updateUsersList={updateUsersList}
+            usersInputList={usersInputList}
+            solution={solution}
           />
+
         </Route>
         <Route path="/Results">
           <Results
