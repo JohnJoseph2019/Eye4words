@@ -11,7 +11,7 @@ export default function Results(props) {
         {props.solution.length > 0 ? <div>
           <h3>Solution</h3>
           {props.solution.map(word =>
-            <div key={word.word}>{word.word}</div>
+            <div key={word}>{word}</div>
           )}</div> : ""}
 
         {props.usersInputList.length > 0 ? <div className="userList">

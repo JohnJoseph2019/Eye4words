@@ -37,31 +37,24 @@ function App() {
   async function apiCall(newWords) {
     let word = newWords.join('');
     console.log('async function start', word)
-    const response = await axios({
-      "method": "GET",
-      "url": `https://danielthepope-countdown-v1.p.rapidapi.com/solve/${word}`,
-      "headers": {
-        "content-type": "application/octet-stream",
-        "x-rapidapi-host": "danielthepope-countdown-v1.p.rapidapi.com",
-        "x-rapidapi-key": process.env.REACT_APP_ANAGRAMS
-      }, "params": {
-        "variance": "-1"
-      }
-    })
+    // const response = await axios({
+    //   "method": "GET",
+    //   "url": `https://danielthepope-countdown-v1.p.rapidapi.com/solve/${word}`,
+    //   "headers": {
+    //     "content-type": "application/octet-stream",
+    //     "x-rapidapi-host": "danielthepope-countdown-v1.p.rapidapi.com",
+    //     "x-rapidapi-key": process.env.REACT_APP_ANAGRAMS
+    //   }, "params": {
+    //     "variance": "-1"
+    //   }
+    // })
+    const response = await axios(`https://cors-anywhere.herokuapp.com/http://www.anagramica.com/all/${word}`)
+
     console.log("response.data = apiCall end", response.data)
-
-
-    let justifuList = response.data.filter((word) => word.length >= 3)
-    console.log("JustifuList = apiCall end", justifuList)
-    setSolution(justifuList)
+    let wordsL3andMore = response.data.all.filter(word => word.length >= 3)
+    console.log("JustifuList = apiCall end", wordsL3andMore)
+    setSolution(wordsL3andMore)
   }
-  // async function dictionaryCall(arr) {
-  //   let realWords = arr.filter(word => {
-  //     let checker = word.word;
-  //     const realChecker = await axios(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=58b3800e-9f58-401e-ae22-2571b50f4d92`)
-
-  //   })
-  // }
   function handleTimer(e) {
     //here when the button is click it will turn IsActive into true and commence the timer
     let bool = isActive
