@@ -7,10 +7,20 @@ export default function PlayGame(props) {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(props.solution)
-    let temp = props.usersInputList;
-    temp.push(props.inputGuess)
-    props.updateUsersList(temp);
-    props.updateInputGuess('');
+
+    let exist = false;
+    for (let i = 0; i < props.solution.length; i++) {
+      if (props.solution[i].word === props.inputGuess) {
+        exist = true;
+        break;
+      }
+    }
+    if (exist === false) {
+      let temp = props.usersInputList;
+      temp.push(props.inputGuess)
+      props.updateUsersList(temp);
+      props.updateInputGuess('');
+    }
   }
   function handleInput(e) {
     let guess = e.target.value;

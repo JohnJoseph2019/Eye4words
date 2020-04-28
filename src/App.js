@@ -98,6 +98,7 @@ function App() {
             handleTimer={handleTimer}
             isActive={isActive}
             solution={solution}
+            usersInputList={usersInputList}
           />
         </Route>
         <Route path="/">
