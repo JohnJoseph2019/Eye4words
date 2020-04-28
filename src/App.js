@@ -60,6 +60,7 @@ function App() {
       updateIsActive(!bool)
       setCounter(10);
       handleRandomPick();
+      updateUsersList([]);
 
     }
   }

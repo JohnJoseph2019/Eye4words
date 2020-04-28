@@ -10,17 +10,17 @@ export default function PlayGame(props) {
 
     let exist = false;
     for (let i = 0; i < props.solution.length; i++) {
-      if (props.solution[i].word === props.inputGuess) {
+      if (props.solution[i].word === props.inputGuess.toUpperCase()) {
         exist = true;
         break;
       }
     }
-    if (exist === false) {
+    if (exist === true) {
       let temp = props.usersInputList;
       temp.push(props.inputGuess)
       props.updateUsersList(temp);
-      props.updateInputGuess('');
     }
+    props.updateInputGuess('');
   }
   function handleInput(e) {
     let guess = e.target.value;
