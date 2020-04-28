@@ -16,7 +16,7 @@ function App() {
   //This is an array of the input answer of the user
   const [usersInputList, updateUsersList] = useState([]);
   //Setting counter for the timer
-  const [counter, setCounter] = React.useState(10);
+  const [counter, setCounter] = React.useState(15);
   //Here is a boolean state that let react know when the timer should start 
   const [isActive, updateIsActive] = React.useState(false);
   const [solution, setSolution] = React.useState([])
@@ -58,11 +58,11 @@ function App() {
   function handleTimer(e) {
     //here when the button is click it will turn IsActive into true and commence the timer
     let bool = isActive
-    if (counter === 10) {
+    if (counter === 15) {
       updateIsActive(!bool);
     } else if (counter === 0) {
       updateIsActive(!bool)
-      setCounter(10);
+      setCounter(15);
       handleRandomPick();
       updateUsersList([]);
 

@@ -42,7 +42,6 @@ export default function PlayGame(props) {
         <input type="text" name="inputGuess" onChange={handleInput} value={props.inputGuess} />
         <button >Submit</button>
       </form>
-      {/* <Link to="/Results"><button>Results</button></Link> */}
     </>
   )
 }
