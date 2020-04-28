@@ -45,12 +45,23 @@ function App() {
         "x-rapidapi-host": "danielthepope-countdown-v1.p.rapidapi.com",
         "x-rapidapi-key": process.env.REACT_APP_ANAGRAMS
       }, "params": {
-        "variance": "1"
+        "variance": "-1"
       }
     })
-    console.log("apiCall end", response.data)
-    setSolution(response.data)
+    console.log("response.data = apiCall end", response.data)
+
+
+    let justifuList = response.data.filter((word) => word.length >= 3)
+    console.log("JustifuList = apiCall end", justifuList)
+    setSolution(justifuList)
   }
+  // async function dictionaryCall(arr) {
+  //   let realWords = arr.filter(word => {
+  //     let checker = word.word;
+  //     const realChecker = await axios(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=58b3800e-9f58-401e-ae22-2571b50f4d92`)
+
+  //   })
+  // }
   function handleTimer(e) {
     //here when the button is click it will turn IsActive into true and commence the timer
     let bool = isActive
