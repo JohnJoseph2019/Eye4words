@@ -29,8 +29,8 @@ function App() {
     //this will allow for the counter keep triggering itself - this information I leanred online not sure if is true
   }, [isActive, counter])
 
-  async function apiCall() {
-    let word = randomLetters.join('');
+  async function apiCall(newWords) {
+    let word = newWords.join('');
     console.log('async function start', word)
     const response = await axios({
       "method": "GET",
@@ -40,7 +40,7 @@ function App() {
         "x-rapidapi-host": "danielthepope-countdown-v1.p.rapidapi.com",
         "x-rapidapi-key": "ab3a292e4amsh3915602120aad7fp17e706jsn5d35a0eab152"
       }, "params": {
-        "variance": "-1"
+        "variance": "1"
       }
     })
     console.log("apiCall end", response.data)
@@ -51,7 +51,6 @@ function App() {
     let bool = isActive
     if (counter === 10) {
       updateIsActive(!bool);
-      apiCall();
     } else if (counter === 0) {
       updateIsActive(!bool)
       setCounter(10);
@@ -70,7 +69,7 @@ function App() {
       newWords.push(alphabet[Math.floor(Math.random() * alphabet.length)])
     }
     setRandomLetter(newWords);
-    apiCall();
+    apiCall(newWords);
   }
   return (
     < div className="App" >
@@ -90,6 +89,7 @@ function App() {
           <Results
             handleTimer={handleTimer}
             isActive={isActive}
+            solution={solution}
           />
         </Route>
         <Route path="/">
