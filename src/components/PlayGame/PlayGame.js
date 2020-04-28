@@ -4,12 +4,13 @@ import "./PlayGame.css"
 
 export default function PlayGame(props) {
   console.log('PlayGame function', props);
-  function handleSubmit() {
-    if (props.solution.includes(props.inputGuess) && !props.usersInputList.includes(props.inputGuess)) {
-      let temp = props.usersInputList;
-      temp.push(props.inputGuess)
-      props.updateUsersList(temp);
-    }
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(props.solution)
+    let temp = props.usersInputList;
+    temp.push(props.inputGuess)
+    props.updateUsersList(temp);
+    props.updateInputGuess('');
   }
   function handleInput(e) {
     let guess = e.target.value;

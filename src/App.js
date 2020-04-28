@@ -43,7 +43,7 @@ function App() {
       "headers": {
         "content-type": "application/octet-stream",
         "x-rapidapi-host": "danielthepope-countdown-v1.p.rapidapi.com",
-        "x-rapidapi-key": "ab3a292e4amsh3915602120aad7fp17e706jsn5d35a0eab152"
+        "x-rapidapi-key": process.env.REACT_APP_ANAGRAMS
       }, "params": {
         "variance": "1"
       }
