@@ -1,7 +1,9 @@
 import React, { useState } from "react"
-import { Redirect } from "react-router-dom"
-import "./PlayGame.css"
+import { Redirect, Link } from "react-router-dom"
 import RestartButton from "../RestartButton/RestartButton"
+import DisplayList from "../DisplayList/DisplayList"
+import "./PlayGame.css"
+
 
 export default function PlayGame(props) {
   const [points, updatePoints] = useState(0);
@@ -75,7 +77,7 @@ export default function PlayGame(props) {
   return (
     <div className="playGame">
 
-      <h1>PlaY Game</h1>
+      <Link to="/"><h1>PlaY Game</h1></Link>
 
       <div className="countDown">Countdown: {props.counter} Sec.</div>
       {props.counter === 0 ? <Redirect to={
@@ -90,6 +92,7 @@ export default function PlayGame(props) {
           <div key={idx} className="letters">{letter}</div>)
           : props.handleRandomPick()}
       </div>
+      <DisplayList />
 
       {props.isActive === false ?
         <div className="buttonList"><button className="startButton" onClick={props.handleTimer}>Start Time</button>

@@ -109,7 +109,6 @@ function App() {
             solution={solution}
             usersInputList={usersInputList}
           />
-          {/* <RestartButton isActive={isActive} /> */}
         </Route>
 
         <Route path="/">
