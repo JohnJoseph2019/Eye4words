@@ -5,7 +5,6 @@ import axios from "axios"
 import Homepage from "./components/Homepage/Homepage"
 import PlayGame from "./components/PlayGame/PlayGame"
 import Results from "./components/Results/Results"
-import RestartButton from "./components/RestartButton/RestartButton"
 import { useEffect, useState } from "react";
 
 function App() {
