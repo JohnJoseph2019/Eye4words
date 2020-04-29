@@ -77,7 +77,6 @@ export default function PlayGame(props) {
         <input type="text" name="inputGuess" onChange={handleInput} value={props.inputGuess} />
         <button className="submit">Submit</button>
       </form>
-
     </div>
   )
 }
