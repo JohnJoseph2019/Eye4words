@@ -1,4 +1,5 @@
 import React from "react"
+import { Redirect } from "react-router-dom"
 
 export default function DisplaySolution(props) {
   console.log('DisplaySolution', props)
@@ -9,7 +10,7 @@ export default function DisplaySolution(props) {
           <h3>Solution</h3>
           {props.solution.map(word =>
             <div key={word} className="resultList">{word}</div>)
-          }</div> : <div className="noSolution">Wow this set does not have solution</div>}
+          }</div> : <Redirect to="/" />}
     </>
 
   )
