@@ -17,22 +17,23 @@ function App() {
   const [usersInputList, updateUsersList] = useState([]);
   //Setting counter for the timer
   const [counter, setCounter] = React.useState(15);
-  //Here is a boolean state that let react know when the timer should start 
-  const [isActive, updateIsActive] = React.useState(false);
+  //Here is a boolean state that let react know when the timer should start and what happens when timer is zero
+  const [Active, updateIsActive] = React.useState(false);
+  //an Array of all possible solutions
   const [solution, setSolution] = React.useState([])
 
   useEffect(() => {
-    let interval = null;
-    if (isActive && counter > 0) {
-      interval = setInterval(() => {
-        setCounter(seconds => seconds - 1);
+    let intervalTime = null;
+    if (Active && counter > 0) {
+      intervalTime = setInterval(() => {
+        setCounter(sec => sec - 1);
       }, 1000);
-    } else if (!isActive && counter === 0) {
-      clearInterval(interval);
+    } else if (!Active && counter === 0) {
+      clearInterval(intervalTime);
     }
-    return () => clearInterval(interval);
+    return () => clearInterval(intervalTime);
     //this will allow for the counter keep triggering itself - this information I leanred online not sure if is true
-  }, [isActive, counter])
+  }, [Active, counter])
 
   async function apiCall(newWords) {
     let word = newWords.join('');
@@ -57,7 +58,7 @@ function App() {
   }
   function handleTimer(e) {
     //here when the button is click it will turn IsActive into true and commence the timer
-    let bool = isActive
+    let bool = Active
     if (counter === 15) {
       updateIsActive(!bool);
     } else if (counter === 0) {
@@ -71,6 +72,7 @@ function App() {
   }
   function handleRandomPick() {
     setCounter(15)
+    updateIsActive(false)
     console.log('handleRandomPick function')
     let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
       "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -95,7 +97,7 @@ function App() {
             updateInputGuess={updateInputGuess}
             handleTimer={handleTimer}
             counter={counter}
-            isActive={isActive}
+            isActive={Active}
             updateUsersList={updateUsersList}
             usersInputList={usersInputList}
             solution={solution}
@@ -106,7 +108,7 @@ function App() {
         <Route path="/Results">
           <Results
             handleTimer={handleTimer}
-            isActive={isActive}
+            isActive={Active}
             solution={solution}
             usersInputList={usersInputList}
           />
