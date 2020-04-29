@@ -89,7 +89,7 @@ export default function PlayGame(props) {
         {props.randomLetters.length !== 0 ? props.randomLetters.map((letter, idx) =>
           <DisplayList key={idx} keyName={idx} className="letters" value={letter} />)
           // <div key={idx} className="letters">{letter}</div>)
-          : props.handleRandomPick()}
+          : <Redirect to="/" />}
       </div>
 
       {props.isActive === false ?

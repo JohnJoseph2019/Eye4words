@@ -1,7 +1,8 @@
 import React from "react"
-import { Link, useLocation } from "react-router-dom"
+import { Redirect, Link, useLocation } from "react-router-dom"
 import "./Results.css"
 import RestartButton from "../RestartButton/RestartButton"
+import DisplaySolution from "../DisplaySolution/DisplaySolution"
 
 export default function Results(props) {
   console.log('Results', props);
@@ -19,21 +20,18 @@ export default function Results(props) {
             <div key={word}>{word}</div>
           )}</div> : <div>No points... better luck next time.</div>}
 
-        {props.solution.length > 0 ? <div>
+        {/* {props.solution.length > 0 ? <div>
           <h3>Solution</h3>
           {props.solution.map(word =>
             <div key={word}>{word}</div>
-          )}</div> : ""}
+          )}</div> : ""} */}
+        <DisplaySolution solution={props.solution} />
 
       </div>
-
-
-
       {props.isActive === true || props.usersInputList.length === 0 ?
         <Link to="/PlayGame">
           <RestartButton handleRestart={props.handleTimer} />
         </Link> : ""}
-
     </>
   )
 }
