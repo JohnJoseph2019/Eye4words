@@ -1,9 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import "./Results.css"
+import { useParams } from "react-router";
 
 export default function Results(props) {
-  console.log(props);
+  console.log('Results', props);
+  console.log('Results - useParams', useParams);
   return (
     <>
       <h1>Results</h1>
