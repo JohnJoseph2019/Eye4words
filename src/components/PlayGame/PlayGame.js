@@ -57,21 +57,27 @@ export default function PlayGame(props) {
     props.updateInputGuess(guess);
   }
   return (
-    <>
+    <div className="playGame">
       <h1>PlaY Game</h1>
+      <div className="countDown">Countdown: {props.counter} Sec.</div>
+      {props.counter === 0 ? <Redirect to={
+        {
+          pathname: "/Results",
+          points: points
 
-      <div>Countdown: {props.counter} Sec.</div>
-      {props.isActive === false ? <button onClick={props.handleTimer}>Start</button> : ""}
-      {props.counter === 0 ? <Redirect points={points} to="/Results" /> : ""}
+        }} /> : ""}
+
       <div className="displayList">
         {props.randomLetters.length !== 0 ? props.randomLetters.map((letter, idx) =>
           <div key={idx} className="letters">{letter}</div>)
           : ''}
       </div>
+      {props.isActive === false ? <button className="startButton" onClick={props.handleTimer}>Start Time</button> : ""}
       <form onSubmit={handleSubmit}>
         <input type="text" name="inputGuess" onChange={handleInput} value={props.inputGuess} />
-        <button >Submit</button>
+        <button className="submit">Submit</button>
       </form>
-    </>
+
+    </div>
   )
 }
