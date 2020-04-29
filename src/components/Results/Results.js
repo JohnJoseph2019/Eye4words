@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, useLocation } from "react-router-dom"
 import "./Results.css"
+import RestartButton from "../RestartButton/RestartButton"
 
 export default function Results(props) {
   console.log('Results', props);
@@ -27,10 +28,10 @@ export default function Results(props) {
 
 
 
-      {props.isActive === true ?
-        <Link to="/PlayGame"> <button onClick={props.handleTimer}>
-          Restart
-          </button></Link> : ""}
+      {props.isActive === true || props.usersInputList.length === 0 ?
+        <Link to="/PlayGame">
+          <RestartButton handleTimer={props.handleTimer} />
+        </Link> : ""}
 
     </>
   )

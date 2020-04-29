@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Redirect } from "react-router-dom"
 import "./PlayGame.css"
+// import RestartButton from "../RestartButton/RestartButton"
 
 export default function PlayGame(props) {
   const [points, updatePoints] = useState(0);
@@ -79,7 +80,7 @@ export default function PlayGame(props) {
       <div className="displayList">
         {props.randomLetters.length !== 0 ? props.randomLetters.map((letter, idx) =>
           <div key={idx} className="letters">{letter}</div>)
-          : ''}
+          : ' { {props.handleRandomPick()} }'}
       </div>
 
       {props.isActive === false ? <button className="startButton" onClick={props.handleTimer}>Start Time</button> : ""}
