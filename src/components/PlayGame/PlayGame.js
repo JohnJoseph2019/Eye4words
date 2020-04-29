@@ -92,8 +92,10 @@ export default function PlayGame(props) {
       </div>
 
       {props.isActive === false ?
-        <div className="buttonList"><button className="startButton" onClick={props.handleTimer}>Start Time</button>
-          {three < 3 ? <div onClick={anotherRestart} style={{ display: "inline" }}><RestartButton handleRestart={props.handleRandomPick} /> </div> : <span className="noMoreRestart">(No more restarts buddy)</span>}
+        <div className="buttonList"><button className="startButton" onClick={props.handleTimer}>Start Timer</button>
+          {three < 3 ? <div onClick={anotherRestart} style={{ display: "inline" }}>
+            <RestartButton handleRestart={props.handleRandomPick} /> </div> :
+            <span className="noMoreRestart">(No more restarts buddy)</span>}
         </div>
         : ""}
 
