@@ -5,6 +5,7 @@ import RestartButton from "../RestartButton/RestartButton"
 
 export default function PlayGame(props) {
   const [points, updatePoints] = useState(0);
+  const [three, updateThree] = useState(0);
 
 
   console.log('PlayGame function', props);
@@ -63,6 +64,13 @@ export default function PlayGame(props) {
     props.updateInputGuess(guess);
   }
 
+  function anotherRestart() {
+    console.log('in anotherRestart')
+    let oneMore = three + 1;
+    updateThree(oneMore);
+    console.log(oneMore)
+  }
+
 
   return (
     <div className="playGame">
@@ -85,7 +93,8 @@ export default function PlayGame(props) {
 
       {props.isActive === false ?
         <div className="buttonList"><button className="startButton" onClick={props.handleTimer}>Start Time</button>
-          <RestartButton handleRestart={props.handleRandomPick} /></div>
+          {three < 3 ? <div onClick={anotherRestart} style={{ display: "inline" }}><RestartButton handleRestart={props.handleRandomPick} /> </div> : <span className="noMoreRestart">(No more restarts buddy)</span>}
+        </div>
         : ""}
 
       <form onSubmit={handleSubmit}>
@@ -94,4 +103,5 @@ export default function PlayGame(props) {
       </form>
     </div>
   )
+
 }
