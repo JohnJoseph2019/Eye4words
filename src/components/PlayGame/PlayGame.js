@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Redirect } from "react-router-dom"
 import "./PlayGame.css"
-// import RestartButton from "../RestartButton/RestartButton"
+import RestartButton from "../RestartButton/RestartButton"
 
 export default function PlayGame(props) {
   const [points, updatePoints] = useState(0);
@@ -83,7 +83,10 @@ export default function PlayGame(props) {
           : props.handleRandomPick()}
       </div>
 
-      {props.isActive === false ? <button className="startButton" onClick={props.handleTimer}>Start Time</button> : ""}
+      {props.isActive === false ?
+        <div className="buttonList"><button className="startButton" onClick={props.handleTimer}>Start Time</button>
+          <RestartButton handleRestart={props.handleRandomPick} /></div>
+        : ""}
 
       <form onSubmit={handleSubmit}>
         <input type="text" name="inputGuess" onChange={handleInput} value={props.inputGuess} />
