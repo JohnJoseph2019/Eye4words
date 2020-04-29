@@ -16,16 +16,8 @@ export default function Results(props) {
       {props.isActive === false ? <Redirect to="/" /> : ""}
       <Link to="/"><h1>Results</h1></Link>
       <div className="displayList">
-
         <DisplayUsersInputList usersInputList={props.usersInputList} points={points} />
-        {/* {props.usersInputList.length > 0 ? <div className="userList">
-          <h3>Your Score: {points}</h3>
-          {props.usersInputList.map(word =>
-            <div key={word}>{word}</div>
-          )}</div> : <div>No points... better luck next time.</div>} */}
-
         <DisplaySolution solution={props.solution} />
-
       </div>
       {props.isActive === true || props.usersInputList.length === 0 ?
         <Link to="/PlayGame">
