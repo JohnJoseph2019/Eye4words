@@ -88,7 +88,6 @@ export default function PlayGame(props) {
       <div className="displayList">
         {props.randomLetters.length !== 0 ? props.randomLetters.map((letter, idx) =>
           <DisplayList key={idx} keyName={idx} className="letters" value={letter} />)
-          // <div key={idx} className="letters">{letter}</div>)
           : <Redirect to="/" />}
       </div>
 

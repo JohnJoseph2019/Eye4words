@@ -3,6 +3,8 @@ import { Redirect, Link, useLocation } from "react-router-dom"
 import "./Results.css"
 import RestartButton from "../RestartButton/RestartButton"
 import DisplaySolution from "../DisplaySolution/DisplaySolution"
+import DisplayUsersInputList from "../DisplayUsersInputList/DisplayUsersInputList"
+
 
 export default function Results(props) {
   console.log('Results', props);
@@ -12,14 +14,15 @@ export default function Results(props) {
   return (
     <>
       {props.isActive === false ? <Redirect to="/" /> : ""}
-      <h1>Results</h1>
+      <Link to="/"><h1>Results</h1></Link>
       <div className="displayList">
 
-        {props.usersInputList.length > 0 ? <div className="userList">
+        <DisplayUsersInputList usersInputList={props.usersInputList} points={points} />
+        {/* {props.usersInputList.length > 0 ? <div className="userList">
           <h3>Your Score: {points}</h3>
           {props.usersInputList.map(word =>
             <div key={word}>{word}</div>
-          )}</div> : <div>No points... better luck next time.</div>}
+          )}</div> : <div>No points... better luck next time.</div>} */}
 
         <DisplaySolution solution={props.solution} />
 
