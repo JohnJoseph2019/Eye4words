@@ -1,0 +1,23 @@
+.homepage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 80px;
+}
+ol{
+  list-style-type: none;
+  margin: 0 auto 40px;
+  text-align: left;
+}
+.ready{
+  font-size: 25px;
+  background-color: bisque;
+  color: black;
+  border-radius: 4px;
+  padding: 10px;
+}
+.ready:hover{
+  background-color: cornflowerblue;
+  color: aliceblue;
+}
