@@ -11,6 +11,7 @@ export default function Results(props) {
 
   return (
     <>
+      {props.isActive === false ? <Redirect to="/" /> : ""}
       <h1>Results</h1>
       <div className="displayList">
 
@@ -20,11 +21,6 @@ export default function Results(props) {
             <div key={word}>{word}</div>
           )}</div> : <div>No points... better luck next time.</div>}
 
-        {/* {props.solution.length > 0 ? <div>
-          <h3>Solution</h3>
-          {props.solution.map(word =>
-            <div key={word}>{word}</div>
-          )}</div> : ""} */}
         <DisplaySolution solution={props.solution} />
 
       </div>
