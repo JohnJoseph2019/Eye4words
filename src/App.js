@@ -81,6 +81,8 @@ function App() {
     setRandomLetter(newWords);
     apiCall(newWords);
   }
+
+
   return (
     < div className="App" >
       <Switch>
@@ -96,8 +98,8 @@ function App() {
             usersInputList={usersInputList}
             solution={solution}
           />
-
         </Route>
+
         <Route path="/Results">
           <Results
             handleTimer={handleTimer}
@@ -106,9 +108,11 @@ function App() {
             usersInputList={usersInputList}
           />
         </Route>
+
         <Route path="/">
           <Homepage handleRandomPick={handleRandomPick} />
         </Route>
+
       </Switch>
 
     </div >
