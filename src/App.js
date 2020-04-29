@@ -66,6 +66,7 @@ function App() {
       setCounter(15);
       handleRandomPick();
       updateUsersList([]);
+      updateInputGuess('')
 
     }
   }

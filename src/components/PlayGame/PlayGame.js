@@ -80,7 +80,7 @@ export default function PlayGame(props) {
       <div className="displayList">
         {props.randomLetters.length !== 0 ? props.randomLetters.map((letter, idx) =>
           <div key={idx} className="letters">{letter}</div>)
-          : ' { {props.handleRandomPick()} }'}
+          : props.handleRandomPick()}
       </div>
 
       {props.isActive === false ? <button className="startButton" onClick={props.handleTimer}>Start Time</button> : ""}
