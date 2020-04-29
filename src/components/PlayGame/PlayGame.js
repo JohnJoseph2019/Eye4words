@@ -4,7 +4,10 @@ import "./PlayGame.css"
 
 export default function PlayGame(props) {
   const [points, updatePoints] = useState(0);
+
+
   console.log('PlayGame function', props);
+
   function addPoints(word) {
     let point = 0;
     switch (word.length) {
@@ -32,6 +35,7 @@ export default function PlayGame(props) {
     console.log('total: ', point)
 
   }
+
   function handleSubmit(e) {
     e.preventDefault();
     console.log('In handle submit ', props.solution)
@@ -52,13 +56,18 @@ export default function PlayGame(props) {
     }
     props.updateInputGuess('');
   }
+
   function handleInput(e) {
     let guess = e.target.value;
     props.updateInputGuess(guess);
   }
+
+
   return (
     <div className="playGame">
+
       <h1>PlaY Game</h1>
+
       <div className="countDown">Countdown: {props.counter} Sec.</div>
       {props.counter === 0 ? <Redirect to={
         {
@@ -72,7 +81,9 @@ export default function PlayGame(props) {
           <div key={idx} className="letters">{letter}</div>)
           : ''}
       </div>
+
       {props.isActive === false ? <button className="startButton" onClick={props.handleTimer}>Start Time</button> : ""}
+
       <form onSubmit={handleSubmit}>
         <input type="text" name="inputGuess" onChange={handleInput} value={props.inputGuess} />
         <button className="submit">Submit</button>
