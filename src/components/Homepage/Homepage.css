@@ -12,12 +12,24 @@ ol{
 }
 .ready{
   font-size: 25px;
-  background-color: bisque;
+  background-color: aliceblue;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
   color: black;
   border-radius: 4px;
   padding: 10px;
+  width: max-content;
 }
 .ready:hover{
   background-color: cornflowerblue;
   color: aliceblue;
 }
+li{
+  margin: 10px;
+  text-align: center;
+}
+  /* font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  background-color: aliceblue;
+  width: max-content; */

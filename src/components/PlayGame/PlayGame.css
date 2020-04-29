@@ -23,6 +23,7 @@ button{
   font-weight: bolder;
   background-color: aliceblue;
   width: max-content;
+  padding: 10px;
   
 }
 .startButton{
