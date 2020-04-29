@@ -7,6 +7,7 @@ export default function Results(props) {
   console.log('Results', props);
   console.log('Results - useLocation', useLocation());
   const { points } = useLocation();
+
   return (
     <>
       <h1>Results</h1>

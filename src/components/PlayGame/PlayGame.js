@@ -67,10 +67,8 @@ export default function PlayGame(props) {
   }
 
   function anotherRestart() {
-    console.log('in anotherRestart')
     let oneMore = three + 1;
     updateThree(oneMore);
-    console.log(oneMore)
   }
 
 
@@ -89,10 +87,10 @@ export default function PlayGame(props) {
 
       <div className="displayList">
         {props.randomLetters.length !== 0 ? props.randomLetters.map((letter, idx) =>
-          <div key={idx} className="letters">{letter}</div>)
+          <DisplayList key={idx} keyName={idx} className="letters" value={letter} />)
+          // <div key={idx} className="letters">{letter}</div>)
           : props.handleRandomPick()}
       </div>
-      <DisplayList />
 
       {props.isActive === false ?
         <div className="buttonList"><button className="startButton" onClick={props.handleTimer}>Start Time</button>
