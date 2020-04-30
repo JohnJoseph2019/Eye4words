@@ -1,0 +1,12 @@
+.solutionList{
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+}
+
+.overflowSolution{
+    overflow: scroll;
+    height: 300px;
+    background-color: blueviolet;
+    width: 100px;
+}
