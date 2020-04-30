@@ -7,8 +7,8 @@ import DisplayUsersInputList from "../DisplayUsersInputList/DisplayUsersInputLis
 
 
 export default function Results(props) {
-  console.log('Results', props);
-  console.log('Results - useLocation', useLocation());
+  // console.log('Results', props);
+  // console.log('Results - useLocation', useLocation());
   const { points } = useLocation();
 
   return (
