@@ -6,6 +6,6 @@ export default function DisplayList(props) {
     // render();
   })
   return (
-    <div key={props.keyName} className={props.className} style={{ animation: "rotation 1s" }}>{props.value}</div>
+    <div key={props.keyName} className={props.className} >{props.value}</div>
   )
 }
