@@ -1,7 +1,7 @@
 .playGame{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 a{
   text-decoration: none;
@@ -9,7 +9,7 @@ a{
 }
 .displayList{
   display: flex;
-  /* flex-direction: row; */
+  flex-direction: row;
   justify-content: center;
 }
 .countDown{
@@ -56,7 +56,7 @@ form{
 
 
 input{
-  width: 500px;
-  height: 30px;
+  display: flex;
+  width: 400px;
   /* border-radius: 4px solid red; */ 
 }

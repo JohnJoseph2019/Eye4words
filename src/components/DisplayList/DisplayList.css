@@ -1,12 +1,19 @@
 .letters{
   border: 1px solid black;
-  display: flex;
   border-radius: 4px;
-  width: 60px;
-  /* height: 100px; */
+  width:100px;
   font-size: 70px;
   margin-bottom: 25px;
   margin-top: 25px;
   justify-content: center;
-  text-align: start;
+  text-align: center;
+  animation: rotation 1s infinite;
+}
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
