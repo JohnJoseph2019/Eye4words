@@ -71,7 +71,7 @@ export default function PlayGame(props) {
     updateThree(oneMore);
   }
 
-
+  console.log('before', three)
   return (
     <div className="playGame">
 
@@ -87,7 +87,7 @@ export default function PlayGame(props) {
 
       <div className="displayList">
         {props.randomLetters.length !== 0 ? props.randomLetters.map((letter, idx) =>
-          <DisplayList key={idx} keyName={idx} className="letters" value={letter} />)
+          <DisplayList key={idx} keyName={idx} className="letters" value={letter} cla={three} />)
           : <Redirect to="/" />}
       </div>
 

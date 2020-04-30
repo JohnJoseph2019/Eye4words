@@ -2,38 +2,17 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  /* text-align: center; */
-  /* margin-top: 80px; */
-  /* text-shadow: 1px 1px 40px #000000; */
-  /* filter: contrast(200%) drop-shadow(1px 1px 8px #232323); */
-  color: black;
 }
 .ready{
-  font-size: 25px;
-  background-color: rgb(241, 232, 221);
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: bolder;
-  color: black;
+  font-size: 20px;
+  background-color: cornsilk;
   border-radius: 4px;
   padding: 10px;
   width: max-content;
+  font-family: 'Lacquer', cursive;
   
 }
 .ready:hover{
-  background-color: cornflowerblue;
-  color: aliceblue;
-  border: none;
+  background-color: rgb(30, 94, 108);
+  color: cornsilk;
 }
-
-/* ol{
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  margin: 0 auto;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: bolder;
-  font-size: 20px;
-}
-li{
-  margin: 10px;
-} */
