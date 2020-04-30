@@ -38,17 +38,6 @@ function App() {
   async function apiCall(newWords) {
     let word = newWords.join('');
     console.log('async function start', word)
-    // const response = await axios({
-    //   "method": "GET",
-    //   "url": `https://danielthepope-countdown-v1.p.rapidapi.com/solve/${word}`,
-    //   "headers": {
-    //     "content-type": "application/octet-stream",
-    //     "x-rapidapi-host": "danielthepope-countdown-v1.p.rapidapi.com",
-    //     "x-rapidapi-key": process.env.REACT_APP_ANAGRAMS
-    //   }, "params": {
-    //     "variance": "-1"
-    //   }
-    // })
     const response = await axios(`https://cors-anywhere.herokuapp.com/http://www.anagramica.com/all/${word}`)
 
     console.log("response.data = apiCall end", response.data)
@@ -71,6 +60,7 @@ function App() {
     }
   }
   function handleRandomPick() {
+    updateUsersList([]);
     setCounter(15)
     updateIsActive(false)
     console.log('handleRandomPick function')
