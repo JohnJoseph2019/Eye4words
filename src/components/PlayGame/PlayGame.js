@@ -28,7 +28,7 @@ export default function PlayGame(props) {
         point += 400;
         break;
       case 7:
-        point += 500;
+        point += 1000;
         break;
       default:
         break;

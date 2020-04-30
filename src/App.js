@@ -76,9 +76,9 @@ function App() {
     apiCall(newWords);
   }
 
-
   return (
     < div className="App" >
+      {/* <h1>learn React</h1> */}
       <Switch>
         <Route path="/PlayGame">
           <PlayGame
@@ -94,7 +94,6 @@ function App() {
             handleRandomPick={handleRandomPick}
           />
         </Route>
-
         <Route path="/Results">
           <Results
             handleTimer={handleTimer}
@@ -103,11 +102,9 @@ function App() {
             usersInputList={usersInputList}
           />
         </Route>
-
         <Route path="/">
           <Homepage handleRandomPick={handleRandomPick} />
         </Route>
-
       </Switch>
 
     </div >
