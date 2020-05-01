@@ -209,9 +209,24 @@ h1{
     font-size: 20px;
     color: rgb(222, 161, 87);
   }  
-  .pgRestart{
-    margin-left: 0;
+    .startButton{ 
+          margin-right: 10px;
   }
 
+  .pgRestart{
+  margin-left: 10px;;
+    }
+  .countDown{
+  font-size: 30px;
+  font-weight: bolder;
+  letter-spacing: 5px;
+}
+.dcounter{
+  font-size: 50px;
+}
+h1{
 
+    font-size: 40px;
+    letter-spacing: 6px;
+}  
 }

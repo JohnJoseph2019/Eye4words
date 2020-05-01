@@ -28,9 +28,9 @@ describe('Results Component', () => {
       />)
   })
   test("renders", () => {
-    expect(component.contains(<Results />)).toBeDefined()
+    expect(component.contains(<Results />)).toBeDefined();
   });
   test('should have a Results text', () => {
-    expect(component.contains('Results')).toBe(true);
+    expect(component.contains('Results')).toBeDefined()
   });
 });
