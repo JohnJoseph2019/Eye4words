@@ -89,17 +89,17 @@ src
 - Be Able to use a second API to display the definition of the correct words
 - Change the input/buttons effects 
 - Be able to add music gaming backgrround track
-- Be able to some animation with transition
+- Be able to add player 2
 
 
 ## Project Schedule
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|April 27th| Project Planning/Project Aproval - Start Basic Components| 
-|April 28th| Start with Timer function / API CAll / Build Homepage /PlayGameButton /PlayGame component| 
-|April 29th| Finish Result / DisplayList / RestartButton component | 
-|April 30th| CSS Styling | 
+|April 27th| Project Planning/Project Aproval - Start Basic Components| Completed
+|April 28th| Start with Timer function / API CAll / Build Homepage /PlayGameButton /PlayGame component| Completed
+|April 29th| Finish Result / DisplayList / RestartButton component | Completed
+|April 30th| CSS Styling | Completed
 |May 1st| Presentation | 
 
 <!-- ## Priority Matrix
@@ -110,26 +110,29 @@ src
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| React-Setup| L | 1hrs|  |  |
-| CSS Style - Basic | L | 1hrs|  | |
-| Homepage component - React | M | 2hrs |  |  |
-| Homepage component - CSS | M | 1hrs |  |  |
-| PlayGame Button component - React | M | 3hrs |  |  |
-| PlayGame Button component - CSS | L | 1hrs |  |  |
-| Accessing the API | M | 2hrs |  |  |
-| Create the timer function | H | 6hrs |  |  |
-| Create PlayGameButton Component| H | 3hrs |  |  |
-| Create PlayGameButton CSS Basic| L | 1hrs |  |  |
-| Create PlayGame component| H | 5hrs |  |  |
-| Create PlayGame CSS - Basic| L | 1hrs |  |  |
-| Create Result component| H | 3hrs |  |  |
-| Create Result CSS Basic| L | 1hrs |  |  |
-| Create DisplayeList Component| H | 3hrs |  |  |
-| Create DisplayeList CSS Basic| L | 1hrs |  |  |
-| Create Restart Button Component| H | 3hrs |  |  |
-| Create Restart Button CSS Basic| H | 1hrs |  |  |
-| Styling CSS | H | 6hrs |  |  |
-| Total | H | 45hrs| hrs | hrs | 
+| React-Setup| L | 1hr|1hr | 1hr |
+| CSS Style - Basic | L | 1hr|1hr | 1hr |
+| Homepage component - React | M | 2hr | 2hr | 2hr |
+| Homepage component - CSS | M | 1hr | 2hr | 2hr |
+| PlayGame component - React | M | 3hr | 5hr | 5hr |
+| PlayGame component - CSS | L | 1hr | 1hr | 1hr |
+| Accessing the API | M | 2hrs | 2hr | 2hr |
+| Create the timer function | H | 6hr | 7hr | 7hr |
+| Create PointSystem Component| H | 3hr | 3hr | 3hr |
+| Create PointSystem CSS Basic| L | 1hr | 1hr  | 1hr |
+| Create RestartButton component| H | 5hr | 2hr | 2hr |
+| Create RestartButton CSS - Basic| L | 1hr|1hr  | 1hr |
+| Create Results component| H | 3hr | 4hr | 4hr |
+| Create Resuls CSS Basic| L | 1hr | 1hr | 1hr |
+| Create DisplayUsersInputList Component| H | 3hr | 3hr | 3hr |
+| Create DisplayUsersInputList CSS Basic| L | 1hr |3hr  | 3hr|
+| Create DisplaySolution Button Component| H | 3hr |3hr  | 3hr |
+| Create DisplaySolution Button CSS Basic| H | 1hr | 1hr | 1h |
+| Create DisplayList Button Component| H | 3hr |3hr  | 3hr |
+| Create DisplayList Button CSS Basic| H | 1hr | 1hr | 1h |
+| Testing with Enzyme/Jest| H | 1hr | 2hr | 2hrh |
+| Styling CSS | H | 6hr | 10hrs | 10hrs  |
+| Total | H | 45hrs| 62hrs | 62hrs | 
 
 
 ## SWOT Analysis
@@ -140,6 +143,28 @@ My weakeness is understanding the React cycle, I need better understand how Reac
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
 
 ```
+//App.js
+  useEffect(() => {
+    let intervalTime = null;
+    if (Active && counter > 0) {
+      intervalTime = setInterval(() => {
+        setCounter(sec => sec - 1);
+      }, 1000);
+    } else if (!Active && counter === 0) {
+      clearInterval(intervalTime);
+    }
+    return () => clearInterval(intervalTime);
+    //this will allow for the counter keep triggering itself - 
+  }, [Active, counter])
+
+
+//PlayGame.js
+    {props.counter === 0 ? <Redirect to={
+      {
+        pathname: "/Results",
+        points: points
+
+      }} /> : ""}
 
 ```
 
