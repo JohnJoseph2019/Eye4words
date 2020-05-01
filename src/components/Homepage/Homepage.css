@@ -4,12 +4,14 @@
   justify-content: space-evenly;
   letter-spacing: 2px;
   text-shadow: 5px 5px 10px #000000;
+  filter: saturate(200%) drop-shadow(1px 2px 5px #232323);
   
 }
 .ready{
   font-size: 35px;
-  background-color: rgba(242, 240, 231, 0.92);
-  color: rgba(255, 140, 0, 0.988);
+  filter: saturate(100%);
+  background-color: rgb(237, 234, 230);
+  color: rgba(255, 140, 0, 0.817);
   font-weight: bolder;
   /* border-radius: 4px; */
   padding: 10px 20px 10px 20px;
@@ -17,9 +19,11 @@
   font-family: 'Lacquer', cursive;
   cursor: pointer;
   border-radius: 5px;
+  text-shadow: 1px 1px 1px #000000;
   /* button click */
   border-bottom: 8px solid #bbb;
   outline: 0;
+
 
 }
 .ready:hover{
