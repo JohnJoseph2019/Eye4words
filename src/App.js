@@ -37,12 +37,12 @@ function App() {
 
   async function apiCall(newWords) {
     let word = newWords.join('');
-    console.log('async function start', word)
+    // console.log('async function start', word)
     const response = await axios(`https://cors-anywhere.herokuapp.com/http://www.anagramica.com/all/${word}`)
 
-    console.log("response.data = apiCall end", response.data)
+    // console.log("response.data = apiCall end", response.data)
     let wordsL3andMore = response.data.all.filter(word => word.length >= 3)
-    console.log("JustifuList = apiCall end", wordsL3andMore)
+    // console.log("JustifuList = apiCall end", wordsL3andMore)
     setSolution(wordsL3andMore)
   }
   function handleTimer(e) {
@@ -63,7 +63,7 @@ function App() {
     updateUsersList([]);
     setCounter(15)
     updateIsActive(false)
-    console.log('handleRandomPick function')
+    // console.log('handleRandomPick function')
     let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
       "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     let vowels = ['a', 'e', 'i', 'o', 'u']

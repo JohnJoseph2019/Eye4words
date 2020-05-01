@@ -5,7 +5,7 @@ import PointSystem from "../PointSystem/PointSystem"
 
 
 export default function Homepage(props) {
-  console.log('Homepage', props)
+  // console.log('Homepage', props)
   return (
     <div className="homepage">
       <h1>Eye4Words</h1>
