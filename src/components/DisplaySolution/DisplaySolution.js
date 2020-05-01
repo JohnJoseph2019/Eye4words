@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom"
 import "./DisplaySolution.css"
 
 export default function DisplaySolution(props) {
-  console.log('DisplaySolution', props)
+  //console.log('DisplaySolution', props)
   return (
     <div className="solutionList">
       <h3 className="solution">Solution</h3>

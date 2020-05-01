@@ -10,7 +10,7 @@ export default function PlayGame(props) {
   const [three, updateThree] = useState(0);
 
 
-  console.log('PlayGame function', props);
+  // console.log('PlayGame function', props);
 
   function addPoints(word) {
     let point = 0;
@@ -33,10 +33,10 @@ export default function PlayGame(props) {
       default:
         break;
     }
-    console.log('Score: ', point)
+    // console.log('Score: ', point)
     point += points;
     updatePoints(point);
-    console.log('total: ', point)
+    // console.log('total: ', point)
 
   }
 
