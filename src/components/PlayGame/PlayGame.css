@@ -142,7 +142,7 @@ i{
     color: aliceblue;; 
   }
   .startButton{
-    margin: 0;
+    margin: 0 auto;
     
   }
   .startButton:hover{
@@ -163,12 +163,12 @@ i{
   
 
   .buttonList{
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: center;
-    text-align: center;
+    text-align: center; */
   }
   @keyframes alert{
   0%{
@@ -187,4 +187,32 @@ i{
     transform: rotate(0deg);
   }   
   }
+}
+
+/* This is for the IPAD / orientation device*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  input{
+  display: flex;
+  /* position: relative; */
+  width: 400px;
+  height: 55px;
+  font-size: 40px;
+  font-family: 'Lacquer', cursive;
+  color: rgb(255, 154, 13);
+  text-shadow: 1px 1px 1px #000000;
+  letter-spacing: 5px;
+  } 
+  .startButton:hover{
+  font-size: 10px;
+  color: rgb(222, 161, 87);
+  } 
+  .pgRestart:hover{
+    font-size: 20px;
+    color: rgb(222, 161, 87);
+  }  
+  .pgRestart{
+    margin-left: 0;
+  }
+
+
 }

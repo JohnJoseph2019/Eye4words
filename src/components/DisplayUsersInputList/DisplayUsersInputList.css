@@ -85,3 +85,48 @@
 }    
 
 }
+
+
+/* This is for the IPAD / orientation device*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+  .userList{
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content:flex-start;
+    width: 500px;
+    overflow-x: scroll;
+  }
+  .score{
+    font-size: 30px;
+  }
+  .lost{
+  margin: 10px auto;
+  width: max-content;
+  font-size: 20px;
+  animation: nextTime .5s 2;
+  }
+  .word{
+    margin: 10px;
+    letter-spacing: 4px;
+    color: rgb(255, 58, 198);
+  }
+  @keyframes nextTime{
+  0%{
+      left: 0;
+  }
+  25%{
+      left: 25%;
+  }
+  50%{
+      left: 0%
+  }
+  75%{
+      left: -25%;
+  }
+  100%{
+      left: 0;
+  }
+}  
+}

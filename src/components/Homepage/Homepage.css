@@ -39,3 +39,20 @@
     font-size: 20px;
   }
 }
+
+/* This is for the IPAD / orientation device*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+      body{
+      text-align: center;
+      font-size: 10px;
+      background-color: rgb(28, 107, 229);
+    }
+    .App {
+      margin-top: 20%;
+      text-align: center;
+      font-size: 25px;
+      letter-spacing: 3px;
+      
+    }
+
+}

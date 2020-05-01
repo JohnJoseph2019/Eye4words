@@ -28,3 +28,15 @@ a{
       margin-right: 20px;
   }
 }
+/* This is for the IPAD / orientation device*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+  .displayL{
+  flex-direction: column;
+  justify-content: space-evenly;
+  }
+  .bbb{
+      margin-top: 20px;
+      margin-right: 20px;
+  }
+
+}
