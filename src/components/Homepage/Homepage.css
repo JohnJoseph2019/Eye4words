@@ -38,6 +38,14 @@
   .ready{
     font-size: 20px;
   }
+  .ready:hover{
+  color: rgba(255, 140, 0, 0.817);
+  font-size: 20px;
+  } 
+  .ready:active{
+  border-bottom-width: 4px;
+  transform: translateY(4px);
+  }   
 }
 
 /* This is for the IPAD / orientation device*/
