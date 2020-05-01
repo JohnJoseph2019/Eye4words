@@ -2,13 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
   text-align: center;
   filter: saturate(200%) drop-shadow(1px 2px 5px #232323);
   font-family: 'Lacquer', cursive;
   color: rgb(255, 154, 13);
 }
-.displayList{
+.displayL{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -18,4 +17,14 @@ a{
   color: rgb(255, 154, 13);
   letter-spacing: 2px;
   font-size: 20px;
+}
+@media screen and (min-width: 375px) and (max-width: 812px){
+  .displayL{
+  flex-direction: column;
+  justify-content: space-evenly;
+  }
+  .bbb{
+      margin-top: 20px;
+      margin-right: 20px;
+  }
 }

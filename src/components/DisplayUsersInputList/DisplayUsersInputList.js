@@ -9,7 +9,7 @@ export default function DisplayUsersInputList(props) {
           <h3 className="score"> Your Score: {props.points}</h3>
           <div className="userList">
             {props.usersInputList.map(word =>
-              <div key={word}>{word}</div>
+              <div key={word} className="word">{word}</div>
             )}
           </div>
         </> :

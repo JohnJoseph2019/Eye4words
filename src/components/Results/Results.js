@@ -15,13 +15,13 @@ export default function Results(props) {
     <div className="resultsPage">
       {props.isActive === false ? <Redirect to="/" /> : ""}
       <Link to="/"><h1>Eye4Words</h1></Link>
-      <div className="displayList">
+      <div className="displayL">
         <DisplayUsersInputList usersInputList={props.usersInputList} points={points} />
         <DisplaySolution solution={props.solution} />
       </div>
       {props.isActive === true || props.usersInputList.length === 0 ?
         <Link to="/PlayGame">
-          <RestartButton handleRestart={props.handleTimer} />
+          <div className="bbb"><RestartButton handleRestart={props.handleTimer} /></div>
         </Link> : ""}
     </div>
   )
