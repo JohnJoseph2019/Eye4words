@@ -1,6 +1,6 @@
 .letters{
 border-radius: 9px;
-background: #f5f7e6;
+background: rgb(130, 119, 244);
 box-shadow: inset 20px 20px 9px #6e6f67, 
             inset -20px -20px 9px #ffffff;
   width:100px;
@@ -11,7 +11,8 @@ box-shadow: inset 20px 20px 9px #6e6f67,
   text-align: center;
   animation: rotation 1s;
   color:rgb(255, 154, 13);
-  font-family: 'Lacquer', cursive;;
+  font-family: 'Lacquer', cursive;
+  text-shadow: 1px 1px 1px #000000;
 }
 .letter2{
 border-radius: 9px;
@@ -26,7 +27,8 @@ box-shadow: inset 20px 20px 9px #6e6f67,
   text-align: center;
   animation: rotation2 1s;
   color:rgb(255, 154, 13);
-  font-family: 'Lacquer', cursive;;
+  font-family: 'Lacquer', cursive;
+  text-shadow: 1px 1px 1px #000000;
 }
 
 @keyframes rotation {
