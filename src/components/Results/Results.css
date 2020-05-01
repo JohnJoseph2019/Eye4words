@@ -20,8 +20,14 @@ a{
   font-size: 20px;
 }
 .bbb{
-  margin: 30px;
+  margin: 20px;
+  font-size: 25px;
 }
+.bbb:hover{
+   color: rgb(109, 0, 0);
+   font-size: 50px;
+}
+
 
 @media screen and (min-width: 375px) and (max-width: 812px){
   .displayL{
@@ -31,6 +37,10 @@ a{
   .bbb{
       margin-top: 20px;
   }
+  .bbb:hover{
+   color: rgb(109, 0, 0);
+   font-size: 20px;
+  }   
 }
 /* This is for the IPAD / orientation device*/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
@@ -41,4 +51,8 @@ a{
   .bbb{
       margin-top: 40px;
   }
+  .bbb:hover{
+   color: rgb(109, 0, 0);
+   font-size: 60px;
+  } 
 }

@@ -21,7 +21,7 @@ export default function Results(props) {
       </div>
       {props.isActive === true || props.usersInputList.length === 0 ?
         <Link to="/PlayGame">
-          <div className="bbb"><RestartButton handleRestart={props.handleTimer} /></div>
+          <RestartButton className="bbb" handleRestart={props.handleTimer} />
         </Link> : ""}
     </div>
   )

@@ -4,7 +4,7 @@
   justify-content: center;
   filter: saturate(200%) drop-shadow(1px 2px 5px #232323);
   font-family: 'Lacquer', cursive;
-  color: rgb(255, 154, 13);
+  /* color: rgb(255, 154, 13); */
   font-size: 20px;
   text-align: center;
 }
@@ -24,6 +24,15 @@ a{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+.buttonList{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  width: max-content;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 button{
   font-family: 'Lacquer', cursive;
@@ -51,6 +60,7 @@ button:active{
   font-size: 50px
 }
 .pgRestart{
+  display: inline;
   margin-left: 25px;
 }
 .pgRestart:hover{
@@ -66,7 +76,7 @@ form{
   margin-left: 5px;
 }
 .submit:hover{
-  background-color: rgb(237, 234, 230);
+  background-color: rgb(109, 0, 0);
   color: aliceblue;; 
 }
 input{
@@ -93,15 +103,7 @@ i{
     font-size: 25px;
   }
 }
-.buttonList{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  text-align: center;
-  width: max-content;
-  margin: 0 auto;
-  margin-bottom: 10px;
-}
+
 h1{
 
     font-size: 40px;
@@ -205,28 +207,26 @@ h1{
   font-size: 10px;
   color: rgb(222, 161, 87);
   } 
+  .startButton{ 
+      margin-right: 10px;
+  }  
   .pgRestart:hover{
     font-size: 20px;
     color: rgb(222, 161, 87);
   }  
-    .startButton{ 
-          margin-right: 10px;
-  }
-
   .pgRestart{
-  margin-left: 10px;;
-    }
+    margin-left: 10px;;
+  }
   .countDown{
-  font-size: 30px;
-  font-weight: bolder;
-  letter-spacing: 5px;
-}
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+  }
 .dcounter{
-  font-size: 50px;
-}
-h1{
-
+    font-size: 50px;
+  }
+  h1{
     font-size: 40px;
     letter-spacing: 6px;
-}  
+  }  
 }

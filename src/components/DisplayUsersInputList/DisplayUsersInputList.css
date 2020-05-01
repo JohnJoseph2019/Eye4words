@@ -105,6 +105,7 @@
   margin: 10px auto;
   width: max-content;
   font-size: 20px;
+  color: rgb(255, 58, 198);
   animation: nextTime .5s 2;
   }
   .word{

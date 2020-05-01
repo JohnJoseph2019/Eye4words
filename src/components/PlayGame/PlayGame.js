@@ -95,8 +95,8 @@ export default function PlayGame(props) {
             Start Timer
             </button>
           {three < 3 ?
-            <div onClick={anotherRestart} style={{ display: "inline" }} className="pgRestart">
-              <RestartButton handleRestart={props.handleRandomPick} />
+            <div onClick={anotherRestart}>
+              <RestartButton className="pgRestart" handleRestart={props.handleRandomPick} />
             </div> :
             <i>(Buddy, no more restarts)</i>}
         </div>
