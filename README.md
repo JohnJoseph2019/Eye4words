@@ -25,19 +25,38 @@ src
 |__ App.test.js
 |__ serviceWorker.js
 |__ setupTests.js
+|__ env.development.local
 |__ components/
-      |__ Homepage.js
-      |__ Homepage.css
-      |__ PlayGameButton.js
-      |__ PlayGameButton.css      
-      |__ PlayGame.js
-      |__ PlayGame.css
-      |__ Results.js
-      |__ Results.css
-      |__ DisplayList.js
-      |__ DisplayList.css
-      |__ RestartButton.js
-      |__ RestartButton.css
+      |__ Homepage/
+            |__ Homepage.js
+            |__ Homepage.css
+            |__ Homepage.test.css
+      |__ PlayGame/
+            |__PlayGame.js
+            |__ PlayGame.css 
+      |__ PointSystem/
+            |__PointSystem.js
+            |__ PointSystem.css
+      |__ RestartButton/
+            |__ RestartButton.js
+            |__ RestartButton.css
+            |__ RestartButton.test.css
+      |__ Results/
+            |__ Results.js
+            |__ Results.css
+            |__ Results.test.css
+      |__ DisplayUsersInputList/
+            |__ DisplayUsersInputList.js
+            |__ DisplayUsersInputList.css
+            |__ DisplayUsersInputList.test.css
+      |__ DisplaySolution/
+            |__ DisplaySolution.js
+            |__ DisplaySolution.css
+            |__ DisplaySolution.test.css 
+      |__ DisplayList/
+            |__ DisplayList.js
+            |__ DisplayList.css
+            |__ DisplayList.test.css                       
 
 ```
 

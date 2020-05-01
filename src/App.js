@@ -32,7 +32,7 @@ function App() {
       clearInterval(intervalTime);
     }
     return () => clearInterval(intervalTime);
-    //this will allow for the counter keep triggering itself - this information I leanred online not sure if is true
+    //this will allow for the counter keep triggering itself - 
   }, [Active, counter])
 
   async function apiCall(newWords) {
