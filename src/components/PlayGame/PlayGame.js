@@ -70,8 +70,6 @@ export default function PlayGame(props) {
     let oneMore = three + 1;
     updateThree(oneMore);
   }
-
-  console.log('before', three)
   return (
     <div className="playGame">
 

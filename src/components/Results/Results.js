@@ -12,9 +12,9 @@ export default function Results(props) {
   const { points } = useLocation();
 
   return (
-    <>
+    <div className="resultsPage">
       {props.isActive === false ? <Redirect to="/" /> : ""}
-      <Link to="/"><h1>Results</h1></Link>
+      <Link to="/"><h1>Eye4Words</h1></Link>
       <div className="displayList">
         <DisplayUsersInputList usersInputList={props.usersInputList} points={points} />
         <DisplaySolution solution={props.solution} />
@@ -23,6 +23,6 @@ export default function Results(props) {
         <Link to="/PlayGame">
           <RestartButton handleRestart={props.handleTimer} />
         </Link> : ""}
-    </>
+    </div>
   )
 }

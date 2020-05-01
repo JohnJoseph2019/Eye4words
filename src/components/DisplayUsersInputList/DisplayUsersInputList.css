@@ -1,0 +1,37 @@
+.userList{
+  font-size: 35px;
+  letter-spacing: 2px;
+  overflow: scroll;
+}
+.score{
+  font-size: 30px;
+}
+.lost{
+  position: relative;
+  top: 50%;
+  font-size: 25px;
+  animation: nextTime 2s;
+}
+
+@keyframes nextTime{
+  0%{
+    transform: rotate(0deg);
+    font-size: 25px;
+  }
+  25%{
+    transform: rotate(90deg);
+    font-size: 30px;
+  }
+  50%{
+    transform: rotate(180deg);
+    font-size: 35px;
+  }
+  75%{
+    transform: rotate(270deg);
+    font-size: 30px;
+  }
+  100%{
+    transform: rotate(360deg);
+    font-size: 25px;
+  }
+}
