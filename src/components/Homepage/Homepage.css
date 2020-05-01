@@ -19,11 +19,10 @@
   cursor: pointer;
   border-radius: 5px;
   text-shadow: 1px 1px 1px #000000;
+
   /* button click */
   border-bottom: 8px solid #bbb;
   outline: 0;
-
-
 }
 .ready:hover{
   color: rgb(109, 0, 0);
@@ -38,7 +37,19 @@ a{
   margin: 0 auto;
   width: max-content;
 }
+h1{
+    font-size: 40px;
+    letter-spacing: 6px;
+   }
 @media screen and (min-width: 375px) and (max-width: 812px){
+  h1{
+    font-size: 30px;
+    letter-spacing: 6px;
+  }
+  h2{
+    font-size: 20px;
+    width: 95%;
+  }
   .ready{
     font-size: 30px;
     padding: 10px;

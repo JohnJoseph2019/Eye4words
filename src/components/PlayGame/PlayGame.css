@@ -1,16 +1,15 @@
 .playGame{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   filter: saturate(200%) drop-shadow(1px 2px 5px #232323);
   font-family: 'Lacquer', cursive;
   color: rgb(255, 154, 13);
   font-size: 20px;
+  text-align: center;
 }
 a{
-  text-decoration: none;
-  color: rgb(255, 154, 13);
-  letter-spacing: 2px;
+  margin: 0 auto;
 }
 .countDown{
   font-size: 30px;
@@ -44,10 +43,10 @@ button:active{
   border-bottom-width: 4px;
   transform: translateY(4px);
 }
-.startButton{ 
+.pgRestart{ 
   margin-right: 25px;
 }
-.startButton:hover{
+.pgRestart:hover{
   color: rgb(109, 0, 0);
   font-size: 50px
 }
@@ -103,6 +102,11 @@ i{
   margin: 0 auto;
   margin-bottom: 10px;
 }
+h1{
+
+    font-size: 40px;
+    letter-spacing: 6px;
+}
 
 /* Iphone x screen size */
 @media screen and (min-width: 375px) and (max-width: 812px){
@@ -119,10 +123,6 @@ i{
   }
   .dcounter{
   font-size: 30px;
-  }
-  h1{
-    font-size: 20px;
-    letter-spacing: 6px;
   }
   button{
     font-size: 25px;
@@ -147,7 +147,7 @@ i{
     color: rgb(222, 161, 87);
     font-size: 28px;
   }
-  .restartButton:hover{
+  .pgRestart:hover{
     font-size: 28px;
     color: rgb(222, 161, 87);
   }  

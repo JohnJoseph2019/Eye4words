@@ -14,12 +14,10 @@
 }
 a{
   position: relative;
-  width: max-content;  
   text-decoration: none;
   color: rgb(255, 154, 13);
   letter-spacing: 2px;
   font-size: 20px;
-  margin: 0 auto;
 }
 .bbb{
   margin: 30px;
