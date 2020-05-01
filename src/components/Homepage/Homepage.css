@@ -40,7 +40,8 @@ a{
 }
 @media screen and (min-width: 375px) and (max-width: 812px){
   .ready{
-    font-size: 20px;
+    font-size: 30px;
+    padding: 10px;
   }
   .ready:hover{
   color: rgba(255, 140, 0, 0.817);

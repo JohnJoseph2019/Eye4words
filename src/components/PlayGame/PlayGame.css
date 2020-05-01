@@ -44,8 +44,8 @@ button:active{
   border-bottom-width: 4px;
   transform: translateY(4px);
 }
-.startButton{
-  margin: 10px auto; 
+.startButton{ 
+  margin-right: 25px;
 }
 .startButton:hover{
   color: rgb(109, 0, 0);
@@ -94,6 +94,16 @@ i{
     font-size: 25px;
   }
 }
+.buttonList{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  width: max-content;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
 /* Iphone x screen size */
 @media screen and (min-width: 375px) and (max-width: 812px){
   .playGame{
@@ -130,7 +140,8 @@ i{
     justify-content: space-evenly;
   }  
   .startButton{
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin: 0;
   }  
   .startButton:hover{
     color: rgb(222, 161, 87);
@@ -150,26 +161,11 @@ i{
     color: aliceblue;; 
   }
   i{
-    position: relative;
-    top: 25px;
-    font-size: 6px;
+    letter-spacing: 0;
+    margin-left: 0;
+    margin: 20px;
     width: max-content;
-    margin: 0;
   }
-  button:active{
-  border-bottom-width: 0px;
-  transform: translateY(none);
-}
-
-  /* .buttonList{
-    /* display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-  }*/
-
   @keyframes alert{
   0%{
     transform: rotate(0deg);
