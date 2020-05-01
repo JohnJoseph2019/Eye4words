@@ -75,7 +75,7 @@ export default function PlayGame(props) {
   return (
     <div className="playGame">
 
-      <Link to="/"><h1>PlaY Game</h1></Link>
+      <Link to="/"><h1>Eye4Words</h1></Link>
 
       <div className="countDown">Countdown: {props.counter} Sec.</div>
       {props.counter === 0 ? <Redirect to={

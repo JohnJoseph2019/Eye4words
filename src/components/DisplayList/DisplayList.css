@@ -9,11 +9,11 @@ box-shadow: inset 20px 20px 9px #6e6f67,
   margin-top: 25px;
   justify-content: center;
   text-align: center;
-  animation: rotation 3s;
+  animation: rotation 1s;
   color:rgb(255, 154, 13);
   font-family: 'Lacquer', cursive;;
 }
-.sssss{
+.letter2{
 border-radius: 9px;
 background: blue;
 box-shadow: inset 20px 20px 9px #6e6f67, 
@@ -24,29 +24,17 @@ box-shadow: inset 20px 20px 9px #6e6f67,
   margin-top: 25px;
   justify-content: center;
   text-align: center;
-  animation: rotation2 3s;
+  animation: rotation2 1s;
   color:rgb(255, 154, 13);
   font-family: 'Lacquer', cursive;;
 }
 
 @keyframes rotation {
-  0%{transform: rotate(0deg)}
-  100%{transform: rotate(360deg)}
-  /* 100%{transform: rotate(0deg)} */
+  0%{transform: rotateY(0deg)}
+  100%{transform: rotateY(360deg)}
 }
 
 @keyframes rotation2 {
-  0%{transform: rotate(0deg)}
-  100%{transform: rotate(360deg)}
-  /* 100%{transform: rotate(0deg)} */
+  0%{transform: rotateY(0deg)}
+  100%{transform: rotateY(360deg)}
 }
-
-
-
-
-/* border-radius: 15px;
-background: #f5f7e6;
-box-shadow: inset 22px 22px 44px #98998f, 
-            inset -22px -22px 44px #ffffff; */
-
-/* 30, 94, 108 */

@@ -2,10 +2,10 @@
   text-align: center;
 }
 body{
-    background-color: rgb(30, 94, 108);
-    color: cornsilk;
+    background-color: rgb(24, 101, 118);
+    color: rgb(255, 154, 13);
     opacity: 0.95;
     font-family: 'Lacquer', cursive;
     font-size: 20px;
+    filter: saturate(200%) drop-shadow(1px 2px 5px #232323);
 }
-
