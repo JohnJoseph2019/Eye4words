@@ -23,7 +23,7 @@ a{
 .displayList{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 button{
   font-family: 'Lacquer', cursive;
