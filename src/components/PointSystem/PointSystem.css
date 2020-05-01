@@ -15,3 +15,17 @@ table,th,td{
   font-size: 25px;
 }
 
+
+/* ----------- iPhone X ----------- */
+/* This is for the Iphone X */
+@media screen and (min-width: 375px) and (max-width: 812px){
+  table{
+    table-layout: fixed;
+  }
+  table,th,td{
+  padding: 10px;
+  font-size: 10px;
+}
+
+}
+

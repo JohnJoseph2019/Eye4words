@@ -40,3 +40,17 @@ box-shadow: inset 20px 20px 9px #6e6f67,
   0%{transform: rotateY(0deg)}
   100%{transform: rotateY(360deg)}
 }
+
+
+/* ----------- iPhone X ----------- */
+/* This is for the Iphone X */
+@media screen and (min-width: 375px) and (max-width: 812px){
+  .letters{
+    font-size: 40px;
+    width:80px;
+  }
+  .letter2{
+    font-size: 40px;
+    width:80px;
+  }
+}

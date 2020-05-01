@@ -5,19 +5,19 @@
   filter: saturate(200%) drop-shadow(1px 2px 5px #232323);
   font-family: 'Lacquer', cursive;
   color: rgb(255, 154, 13);
+  font-size: 20px;
 }
 a{
   text-decoration: none;
   color: rgb(255, 154, 13);
   letter-spacing: 2px;
-  font-size: 20px;
 }
 .countDown{
   font-size: 30px;
   font-weight: bolder;
   letter-spacing: 5px;
 }
-span{
+.dcounter{
   font-size: 50px;
 }
 
@@ -93,5 +93,98 @@ i{
   }
   100%{
     font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 812px){
+  .playGame{
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+  a{
+    font-size: 10px;
+  }
+  .countDown{
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .dcounter{
+  font-size: 30px;
+  }
+  h1{
+    font-size: 20px;
+    letter-spacing: 6px;
+  }
+  button{
+    font-size: 25px;
+  }
+  form{
+    /* display: flex; */
+    flex-direction: column;
+  }
+  input{
+      width: 300px;
+      margin: 10px auto;
+      height: 65px;
+  }
+ .displayList{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }  
+
+  .submit{
+    margin: 10px auto;
+    letter-spacing: 6px;
+    width: 175px;
+  }
+  .submit:hover{
+    font-size: 20px; 
+    color: aliceblue;; 
+  }
+  .startButton{
+    margin: 0;
+    
+  }
+  .startButton:hover{
+  font-size: 10px;
+  color: rgb(222, 161, 87);
+  }  
+  .restartButton:hover{
+    font-size: 20px;
+    color: rgb(222, 161, 87);
+  }
+  i{
+    position: relative;
+    top: 25px;
+    font-size: 6px;
+    width: max-content;
+    margin: 0;
+  }
+  
+
+  .buttonList{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    text-align: center;
+  }
+  @keyframes alert{
+  0%{
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(45deg);
+  }
+  50%{
+    transform: rotate(0deg);
+  }  
+  75%{
+    transform: rotate(-45deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }   
   }
 }

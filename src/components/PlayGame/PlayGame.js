@@ -75,7 +75,7 @@ export default function PlayGame(props) {
 
       <Link to="/"><h1>Eye4Words</h1></Link>
 
-      <div className="countDown">Countdown: <span>{props.counter}</span> Sec.</div>
+      <div className="countDown">Countdown: <span className="dcounter">{props.counter}</span> Sec.</div>
       {props.counter === 0 ? <Redirect to={
         {
           pathname: "/Results",
@@ -90,9 +90,14 @@ export default function PlayGame(props) {
       </div>
 
       {props.isActive === false ?
-        <div className="buttonList"><button className="startButton" onClick={props.handleTimer}>Start Timer</button>
-          {three < 3 ? <div onClick={anotherRestart} style={{ display: "inline" }}>
-            <RestartButton handleRestart={props.handleRandomPick} /> </div> :
+        <div className="buttonList">
+          <button className="startButton" onClick={props.handleTimer}>
+            Start Timer
+            </button>
+          {three < 3 ?
+            <div onClick={anotherRestart} style={{ display: "inline" }}>
+              <RestartButton handleRestart={props.handleRandomPick} />
+            </div> :
             <i>(Buddy, no more restarts)</i>}
         </div>
         : ""}

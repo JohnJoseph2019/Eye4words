@@ -34,3 +34,8 @@
   border-bottom-width: 4px;
   transform: translateY(4px);
 }
+@media screen and (min-width: 375px) and (max-width: 812px){
+  .ready{
+    font-size: 20px;
+  }
+}
