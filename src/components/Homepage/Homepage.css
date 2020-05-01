@@ -13,7 +13,6 @@
   background-color: rgb(237, 234, 230);
   color: rgba(255, 140, 0, 0.817);
   font-weight: bolder;
-  /* border-radius: 4px; */
   padding: 10px 20px 10px 20px;
   width: max-content;
   font-family: 'Lacquer', cursive;
@@ -33,6 +32,11 @@
 .ready:active{
   border-bottom-width: 4px;
   transform: translateY(4px);
+}
+a{
+  position: relative;
+  margin: 0 auto;
+  width: max-content;
 }
 @media screen and (min-width: 375px) and (max-width: 812px){
   .ready{

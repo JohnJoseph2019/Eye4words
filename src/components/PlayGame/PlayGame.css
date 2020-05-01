@@ -45,8 +45,7 @@ button:active{
   transform: translateY(4px);
 }
 .startButton{
-  margin: 10px auto;
-  width: max-content;
+  margin: 10px auto; 
 }
 .startButton:hover{
   color: rgb(109, 0, 0);
@@ -68,7 +67,7 @@ form{
   margin-left: 5px;
 }
 .submit:hover{
-  background-color: rgba(40,100, 200, .5);
+  background-color: rgb(237, 234, 230);
   color: aliceblue;; 
 }
 input{
@@ -95,7 +94,7 @@ i{
     font-size: 25px;
   }
 }
-
+/* Iphone x screen size */
 @media screen and (min-width: 375px) and (max-width: 812px){
   .playGame{
     font-size: 10px;
@@ -119,7 +118,6 @@ i{
     font-size: 25px;
   }
   form{
-    /* display: flex; */
     flex-direction: column;
   }
   input{
@@ -131,27 +129,25 @@ i{
     flex-wrap: wrap;
     justify-content: space-evenly;
   }  
-
+  .startButton{
+    margin: 0 auto;
+  }  
+  .startButton:hover{
+    color: rgb(222, 161, 87);
+    font-size: 28px;
+  }
+  .restartButton:hover{
+    font-size: 28px;
+    color: rgb(222, 161, 87);
+  }  
   .submit{
     margin: 10px auto;
     letter-spacing: 6px;
     width: 175px;
   }
   .submit:hover{
-    font-size: 20px; 
+    font-size: 28px; 
     color: aliceblue;; 
-  }
-  .startButton{
-    margin: 0 auto;
-    
-  }
-  .startButton:hover{
-  font-size: 10px;
-  color: rgb(222, 161, 87);
-  }  
-  .restartButton:hover{
-    font-size: 20px;
-    color: rgb(222, 161, 87);
   }
   i{
     position: relative;
@@ -160,16 +156,20 @@ i{
     width: max-content;
     margin: 0;
   }
-  
+  button:active{
+  border-bottom-width: 0px;
+  transform: translateY(none);
+}
 
-  .buttonList{
+  /* .buttonList{
     /* display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    text-align: center; */
-  }
+    text-align: center;
+  }*/
+
   @keyframes alert{
   0%{
     transform: rotate(0deg);
@@ -189,11 +189,10 @@ i{
   }
 }
 
-/* This is for the IPAD / orientation device*/
+/*********This is for the IPAD / orientation device********/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
   input{
   display: flex;
-  /* position: relative; */
   width: 400px;
   height: 55px;
   font-size: 40px;

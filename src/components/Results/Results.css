@@ -13,11 +13,18 @@
   justify-content: space-around;
 }
 a{
+  position: relative;
+  width: max-content;  
   text-decoration: none;
   color: rgb(255, 154, 13);
   letter-spacing: 2px;
   font-size: 20px;
+  margin: 0 auto;
 }
+.bbb{
+  margin: 30px;
+}
+
 @media screen and (min-width: 375px) and (max-width: 812px){
   .displayL{
   flex-direction: column;
@@ -25,7 +32,6 @@ a{
   }
   .bbb{
       margin-top: 20px;
-      margin-right: 20px;
   }
 }
 /* This is for the IPAD / orientation device*/
