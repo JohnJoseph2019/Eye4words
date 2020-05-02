@@ -90,7 +90,7 @@
 /* This is for the IPAD / orientation device*/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
   .userList{
-    font-size: 25px;
+    font-size: 35px;
     display: flex;
     flex-direction: row;
     margin: 0 auto;
@@ -99,7 +99,7 @@
     overflow-x: scroll;
   }
   .score{
-    font-size: 30px;
+    font-size: 35px;
   }
   .lost{
   margin: 10px auto;

@@ -5,6 +5,7 @@ import axios from "axios"
 import Homepage from "./components/Homepage/Homepage"
 import PlayGame from "./components/PlayGame/PlayGame"
 import Results from "./components/Results/Results"
+import DefinitionPage from "./components/DefinitionPage/DefintionPage"
 import { useEffect, useState } from "react";
 
 function App() {
@@ -80,6 +81,17 @@ function App() {
     < div className="App" >
       {/* <h1>learn React</h1> */}
       <Switch>
+        <Route path="/Definition/:word">
+          <DefinitionPage />
+        </Route>
+        <Route path="/Results">
+          <Results
+            handleTimer={handleTimer}
+            isActive={Active}
+            solution={solution}
+            usersInputList={usersInputList}
+          />
+        </Route>
         <Route path="/PlayGame">
           <PlayGame
             randomLetters={randomLetters}
@@ -92,14 +104,6 @@ function App() {
             usersInputList={usersInputList}
             solution={solution}
             handleRandomPick={handleRandomPick}
-          />
-        </Route>
-        <Route path="/Results">
-          <Results
-            handleTimer={handleTimer}
-            isActive={Active}
-            solution={solution}
-            usersInputList={usersInputList}
           />
         </Route>
         <Route path="/">
