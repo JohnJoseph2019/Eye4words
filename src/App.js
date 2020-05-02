@@ -16,7 +16,7 @@ function App() {
   //This is an array of the input answer of the user
   const [usersInputList, updateUsersList] = useState([]);
   //Setting counter for the timer
-  const [counter, setCounter] = React.useState(15);
+  const [counter, setCounter] = React.useState(30);
   //Here is a boolean state that let react know when the timer should start and what happens when timer is zero
   const [Active, updateIsActive] = React.useState(false);
   //an Array of all possible solutions
@@ -48,11 +48,11 @@ function App() {
   function handleTimer(e) {
     //here when the button is click it will turn IsActive into true and commence the timer
     let bool = Active
-    if (counter === 15) {
+    if (counter === 30) {
       updateIsActive(!bool);
     } else if (counter === 0) {
       updateIsActive(!bool)
-      setCounter(15);
+      setCounter(30);
       handleRandomPick();
       updateUsersList([]);
       updateInputGuess('')
@@ -61,7 +61,7 @@ function App() {
   }
   function handleRandomPick() {
     updateUsersList([]);
-    setCounter(15)
+    setCounter(30)
     updateIsActive(false)
     // console.log('handleRandomPick function')
     let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
