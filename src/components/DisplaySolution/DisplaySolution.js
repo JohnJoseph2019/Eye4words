@@ -10,7 +10,7 @@ export default function DisplaySolution(props) {
       {props.solution.length > 0 ?
         <div className="overflowSolution">
           {props.solution.map(word =>
-            <Link key={word} to={`/Definition/${word}`}> <div key={word} className="resultList">{word}</div></Link>)
+            <Link className="resultList" key={word} to={`/Definition/${word}`}><div>{word}</div></Link>)
           }</div> : <Redirect to="/" />
       }
     </div >

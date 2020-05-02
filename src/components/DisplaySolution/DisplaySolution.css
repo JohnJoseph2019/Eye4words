@@ -44,6 +44,7 @@ a {
     width: 300px;
     overflow-x: scroll;
     height: auto;
+    scrollbar-width: thin;
   }
   .solution{
     font-size: 20px;
