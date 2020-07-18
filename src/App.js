@@ -1,12 +1,12 @@
-import React from 'react'
-import { Route, Switch } from "react-router-dom"
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
-import axios from "axios"
-import Homepage from "./components/Homepage/Homepage"
-import PlayGame from "./components/PlayGame/PlayGame"
-import Results from "./components/Results/Results"
-import DefinitionPage from "./components/DefinitionPage/DefintionPage"
-import { useEffect, useState } from "react";
+import axios from 'axios';
+import Homepage from './components/Homepage/Homepage';
+import PlayGame from './components/PlayGame/PlayGame';
+import Results from './components/Results/Results';
+// import DefinitionPage from "./components/DefinitionPage/DefintionPage"
+import { useEffect, useState } from 'react';
 
 function App() {
   //This is for the all random letters
@@ -21,7 +21,7 @@ function App() {
   //Here is a boolean state that let react know when the timer should start and what happens when timer is zero
   const [Active, updateIsActive] = React.useState(false);
   //an Array of all possible solutions
-  const [solution, setSolution] = React.useState([])
+  const [solution, setSolution] = React.useState([]);
 
   useEffect(() => {
     let intervalTime = null;
@@ -33,58 +33,85 @@ function App() {
       clearInterval(intervalTime);
     }
     return () => clearInterval(intervalTime);
-    //this will allow for the counter keep triggering itself - 
-  }, [Active, counter])
+    //this will allow for the counter keep triggering itself -
+  }, [Active, counter]);
 
   async function apiCall(newWords) {
     let word = newWords.join('');
     // console.log('async function start', word)
-    const response = await axios(`https://cors-anywhere.herokuapp.com/http://www.anagramica.com/all/${word}`)
+    const response = await axios(
+      `https://cors-anywhere.herokuapp.com/http://www.anagramica.com/all/${word}`
+    );
 
     // console.log("response.data = apiCall end", response.data)
-    let wordsL3andMore = response.data.all.filter(word => word.length >= 3)
+    let wordsL3andMore = response.data.all.filter(word => word.length >= 3);
     // console.log("JustifuList = apiCall end", wordsL3andMore)
-    setSolution(wordsL3andMore)
+    setSolution(wordsL3andMore);
   }
   function handleTimer(e) {
     //here when the button is click it will turn IsActive into true and commence the timer
-    let bool = Active
+    let bool = Active;
     if (counter === 30) {
       updateIsActive(!bool);
     } else if (counter === 0) {
-      updateIsActive(!bool)
+      updateIsActive(!bool);
       setCounter(30);
       handleRandomPick();
       updateUsersList([]);
-      updateInputGuess('')
-
+      updateInputGuess('');
     }
   }
   function handleRandomPick() {
     updateUsersList([]);
-    setCounter(30)
-    updateIsActive(false)
+    setCounter(30);
+    updateIsActive(false);
     // console.log('handleRandomPick function')
-    let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
-      "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    let vowels = ['a', 'e', 'i', 'o', 'u']
-    let newWords = []
+    let alphabet = [
+      'a',
+      'b',
+      'c',
+      'd',
+      'e',
+      'f',
+      'g',
+      'h',
+      'i',
+      'j',
+      'k',
+      'l',
+      'm',
+      'n',
+      'o',
+      'p',
+      'q',
+      'r',
+      's',
+      't',
+      'u',
+      'v',
+      'w',
+      'x',
+      'y',
+      'z',
+    ];
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let newWords = [];
     for (let i = 0; i < 7; i++) {
       if (i === 0) newWords.push(vowels[Math.floor(Math.random() * vowels.length)]);
-      newWords.push(alphabet[Math.floor(Math.random() * alphabet.length)])
+      newWords.push(alphabet[Math.floor(Math.random() * alphabet.length)]);
     }
     setRandomLetter(newWords);
     apiCall(newWords);
   }
 
   return (
-    < div className="App" >
+    <div className='App'>
       {/* <h1>learn React</h1> */}
       <Switch>
-        <Route path="/Definition/:word">
+        {/* <Route path='/Definition/:word'>
           <DefinitionPage />
-        </Route>
-        <Route path="/Results">
+        </Route> */}
+        <Route path='/Results'>
           <Results
             handleTimer={handleTimer}
             isActive={Active}
@@ -92,7 +119,7 @@ function App() {
             usersInputList={usersInputList}
           />
         </Route>
-        <Route path="/PlayGame">
+        <Route path='/PlayGame'>
           <PlayGame
             randomLetters={randomLetters}
             inputGuess={inputGuess}
@@ -106,12 +133,11 @@ function App() {
             handleRandomPick={handleRandomPick}
           />
         </Route>
-        <Route path="/">
+        <Route path='/'>
           <Homepage handleRandomPick={handleRandomPick} />
         </Route>
       </Switch>
-
-    </div >
+    </div>
   );
 }
 
