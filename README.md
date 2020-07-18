@@ -2,7 +2,9 @@
 
 ## Project Title
 
-Words in a Word
+eye4words
+
+[website](https://eye4words.netlify.app/)
 
 ## Project Description
 
