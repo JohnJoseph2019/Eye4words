@@ -9,3 +9,12 @@ a{
   margin: 0 auto;
   width: max-content;
 }
+.definitionWord{
+  display: flex;
+  height: 100%;
+  width: max-content;
+  justify-content: center;
+  /* justify-content: center; */
+  align-items: center;
+
+}

@@ -25,8 +25,9 @@ export default function DefinitionPage(props) {
       <NavLink to="/"><h1>Eye4Words</h1></NavLink>
       <h3>{params.word}</h3>
       {definitions.length > 0 ? definitions.map(e =>
-        <div key={e.meta.uuid}>{e.shortdef[0]}</div>
+        <div key={e.meta.uuid} className="definitionWord">{e.shortdef[0]}</div>
       ) : ""}
     </div>
   )
 }
+

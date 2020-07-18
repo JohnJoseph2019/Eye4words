@@ -1,109 +1,105 @@
-.solutionList{
+.solutionList {
   display: flex;
   flex-direction: column;
   width: max-content;
 }
-.solution{
+.solution {
   font-size: 35px;
 }
-.overflowSolution{
-    margin: 0 auto; 
-    font-size: 35px;
-    letter-spacing: 2px;
-    overflow: scroll;
-    height: 250px;
-    width: max-content;
-    /* padding-bottom: -10px; */
+.overflowSolution {
+  margin: 0 auto;
+  font-size: 35px;
+  letter-spacing: 2px;
+  overflow: scroll;
+  height: 250px;
+  width: max-content;
+  /* padding-bottom: -10px; */
 }
- .resultList{
-    margin: 30px;
-    letter-spacing: 4px;
-    color: rgb(255, 58, 198);
-  } 
+.resultList {
+  letter-spacing: 4px;
+  color: rgb(255, 58, 198);
+}
 
 a {
   color: blue;
   text-decoration: none; /* no underline */
   font-size: inherit;
-}  
+}
 
-@media screen and (min-width: 375px) and (max-width: 812px){
-  .solutionList{
+@media screen and (min-width: 375px) and (max-width: 812px) {
+  .solutionList {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
     width: auto;
   }
-  .overflowSolution{
+  .overflowSolution {
     font-size: 20px;
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    justify-content:flex-start;
+    justify-content: flex-start;
     width: 300px;
     overflow-x: scroll;
     height: auto;
     scrollbar-width: thin;
   }
-  .solution{
+  .solution {
     font-size: 20px;
     padding: 0;
-    margin: 30px  0 auto;
+    margin: 30px 0 auto;
   }
-  .resultList{
+  .resultList {
     margin: 10px;
     letter-spacing: 4px;
     color: rgb(255, 58, 198);
-  }    
-  
-
+  }
 }
 
 /* This is for the IPAD / orientation device*/
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
-  .solutionList{
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .solutionList {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
     width: auto;
   }
-  .overflowSolution{
+  .overflowSolution {
     font-size: 25px;
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    justify-content:flex-start;
+    justify-content: flex-start;
     width: 500px;
     overflow-x: scroll;
     height: auto;
   }
-  .solution{
+  .solution {
     font-size: 30px;
     padding: 0;
-    margin: 30px  0 auto;
+    margin: 30px 0 auto;
   }
-  .resultList{
+  .resultList {
     margin: 10px;
     letter-spacing: 4px;
     color: rgb(255, 58, 198);
-  }  
-
+  }
 }
 
 /* ----------- iPhone X ----------- */
 /* This is for the Iphone X */
-@media screen and (min-width: 375px) and (max-width: 812px){
-  .lost{
+@media screen and (min-width: 375px) and (max-width: 812px) {
+  .lost {
     margin: 10px auto;
     width: max-content;
     font-size: 20px;
-    animation: nextTime .5s 2;
+    animation: nextTime 0.5s 2;
   }
-  .solution{
+  .solution {
     font-size: 25px;
     padding: 0;
-    margin: 30px  0 auto;
-  }  
+    margin: 30px 0 auto;
+  }
 }
