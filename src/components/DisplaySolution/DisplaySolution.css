@@ -13,7 +13,6 @@
   overflow: scroll;
   height: 250px;
   width: max-content;
-  /* padding-bottom: -10px; */
 }
 .resultList {
   letter-spacing: 4px;
