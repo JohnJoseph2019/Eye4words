@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import React from 'react';
+import { Redirect } from 'react-router-dom';
 import './DisplaySolution.css';
 
 export default function DisplaySolution(props) {
